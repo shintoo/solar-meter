@@ -1,0 +1,23 @@
+Solar Meter
+
+Function:
+    Display 5V solar cell voltage on an 8-LED display
+    By default scaled 0V to 5V. Also included is a 1.2V
+    to 1.5V scale for use with an AA battery (See the
+    Tables section in src/solar-meter.asm).
+
+Platform: AVR ATMega328P
+AREF is Vcc, 5V.
+Assembler: avra
+Depends: m328Pdef.inc
+Configuration:
+        PC0     -> Solar cell +
+        Gnd     -> Solar cell -
+        PD0     -> LED 0        -> R1   -> Gnd
+        PD1     -> LED 1        -> R1
+        PD2     -> LED 2        -> R1
+        PD3     -> LED 3        -> R1
+        PD4     -> LED 4        -> R2   -> Gnd
+        PD5     -> LED 5        -> R2
+        PD6     -> LED 6        -> R2
+        PD7     -> LED 7        -> R2   
